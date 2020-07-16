@@ -1,0 +1,87 @@
+body {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+    margin: 20px 0 90px;
+}
+.form-container > div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.form-container div div {
+    min-width: 110px;
+    font-size: 18px;
+    padding-right: 8px;
+    display: flex;
+}
+.form-container div input{
+    border-radius: 5px;
+    padding: 3px;
+    height: 30px;
+    border: 2px solid rgb(122, 122, 122);
+}
+.form-container div textarea {
+    border-radius: 5px;
+    padding: 3px;
+    border: 2px solid rgb(122, 122, 122);
+    width: 300px;
+    height: 100px;
+    resize: none;
+}
+.form-container div label{
+    height: 30px;
+    width: 150px;
+    padding-left: 30px;
+}
+
+.form-container div span {
+    color: rgb(199, 0, 0);
+    padding: 3px;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.082);
+    margin-left: 10px;
+    display: none;
+}
+
+.error {
+    background-color: rgba(250, 0, 0, 0.137);
+    border-color: red !important;
+}
+
+.form-container div:last-child {
+    margin-top: 20px;
+}
+
+.form-container div:last-child button {
+    height: 34px;
+    width: 130px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.form-container div:last-child button:first-child {
+    margin-right: 30px;
+    border: 2px solid rgb(42, 138, 47);
+    background-color: rgb(101, 187, 51);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.disabled-button {
+    border: 2px solid rgb(96, 133, 98) !important;
+    background-color: rgb(135, 182, 108) !important;
+    color: rgb(235, 235, 235) !important;
+}
+
+.form-container div:last-child button:last-child {
+    border: 2px solid rgb(180, 180, 180);
+    background-color: rgb(218, 218, 218);
+    color: rgb(78, 78, 78);
+}
+
+.form-container div b {
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    padding-right: 3px;
+}

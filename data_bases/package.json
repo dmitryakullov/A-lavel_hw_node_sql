@@ -1,0 +1,17 @@
+{
+  "name": "sdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.1.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.11"
+  }
+}

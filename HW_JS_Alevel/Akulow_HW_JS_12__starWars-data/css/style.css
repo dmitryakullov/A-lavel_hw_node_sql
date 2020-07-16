@@ -1,0 +1,16 @@
+body{
+    padding: 20px;
+}
+#table button {
+    display: block;
+    background-color: rgb(96, 179, 1);
+    color: white;
+    height: 100%;
+    width: 45px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+#table table tr td:last-child{
+    display: flex;
+    justify-content: center;
+}

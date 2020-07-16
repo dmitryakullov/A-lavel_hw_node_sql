@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>↕↔ JS ↔↕</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="canvas-border"></div>
+            <canvas id="canvas" width="500" height="300" style="border:1px solid #111111;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div>
+        <select id='tool'>
+            <option value='graffity'>Graffity</option>
+            <option value='circle'>Circle</option>
+            <option value='line'>Line</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="ellipse">Ellipse</option>
+            <option value='select'>Select</option>
+        </select>
+        <br>
+        <label for=""><input id="fill" type="checkbox">Fill</label>
+        <br>
+        <input id="color" type="color">
+        <br>
+        <input type='number' id='size' value=10>
+        <br>
+        <button id='delete'>Delete...</button>
+        <br>
+        <button id="sendChat">Send in chat</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

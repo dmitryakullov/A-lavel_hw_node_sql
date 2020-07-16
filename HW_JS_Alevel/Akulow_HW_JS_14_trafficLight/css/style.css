@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+.traffic-light {
+    height: auto;
+    width: 500px;
+    position: relative;
+    border: 6px solid rgb(80, 48, 11);
+}
+
+.red, .yellow, .green {
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    border-radius: 100%;
+    left: 220px;
+}
+.red {
+    top: 71px;
+    background-color: rgb(88, 29, 29);
+}
+.yellow {
+    top: 153px;
+    background-color: rgb(84, 88, 29);
+}
+.green {
+    top: 234px;
+    background-color: rgb(43, 88, 29);
+}
+
+.red-active {
+    background-color: rgb(255, 59, 59);
+    box-shadow: 0 0 50px 26px rgb(255, 0, 0);
+    z-index: 20;
+}
+.yellow-active {
+    background-color: rgb(236, 255, 67);
+    box-shadow: 0 0 50px 26px rgb(229, 255, 0);
+    z-index: 20;
+}
+.green-active {
+    background-color: rgb(67, 255, 67);
+    box-shadow: 0 0 50px 26px rgb(0, 255, 0);
+    z-index: 20;
+}
+
+.wrap-for-btn {
+    display: flex;
+    width: 160px;
+    height: auto;
+    position: relative;
+}
+#btn{
+    position: absolute;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border: 3px solid rgb(126, 126, 126);
+    background-color: rgb(177, 177, 177);
+    transition-duration: 0.2s;;
+    top: 115px;
+    left: 82px;
+}
+#btn:hover{
+    background-color: rgb(116, 116, 116);
+}
+.counter{
+    border:4px solid red;
+    height: 100px;
+    padding: 6px;
+    font-size: 70px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
