@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 30px;">
+    <h1>Hello world</h1>
+    <h2>Регистрация</h2>
+    <input placeholder="name" type="text" id="regName">
+    <input placeholder="password" type="text" id="regPas">
+    <button id="regSend">Отправить</button>
+
+    <br><br><br>
+    
+    <h2>Отправить JWT</h2>
+    <input placeholder="JWT" type="text" id="inpJWT">
+    <button id="sendJwt">Отправить JWT</button>
+
+    <br><br>
+
+    <h2>Получить JWT по id</h2>
+    <input type="number" placeholder="ID" id="inpId">
+    <button id="sendId">Send</button>
+    <input type="text" placeholder="Resault" id="getJWT">
+
+    <script>
+
+        regSend.onclick = () => {
+            let obj = {
+                username: regName.value,
+                password: regPas.value
+            }
+
+            if(regName.value !=='' && regPas.value !=='') {
+                fetch('/getData', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(obj)
+                })
+                regName.value = '';
+                regPas.value = '';
+            }
+        }
+
+        sendJwt.onclick = () => {
+            if (inpJWT.value !=='') {
+                fetch('/getJWT', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer ' + inpJWT.value
+                    }
+                })
+            }
+            inpJWT.value = '';
+        }
+        sendId.onclick = () => {
+            if(inpId.value !=='') {
+                let obj ={id: inpId.value}
+                fetch('/getId', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(obj)
+                }).then(a => a.text()).then(a => getJWT.value = a);
+                
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+
